@@ -1,0 +1,149 @@
+@charset 'UTF-8';
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+ul, ol, li {
+    list-style: none;
+}
+a {
+    text-decoration: none;
+}
+body {
+    position: relative;
+}
+header {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+    background: transparent;
+    transition: all .5s;
+}
+header .container {
+    display: flex;
+    justify-content: flex-start;
+}
+header .logo {
+    padding: 12px 50px;
+}
+header .navbar {
+    display: flex;
+    margin-left: 300px;
+}
+header .navbar > li {
+    width: 132px;
+    font-size: 15px;
+    font-weight: bold;
+    color: #fff;
+    line-height: 67px;
+}
+header .submenu {
+    margin-bottom: 20px;
+    display: none;
+}
+
+header .submenu li {
+    padding: 10px 0;
+    height: auto;
+    line-height: 1;
+}
+header .submenu li a {
+    font-size: 13px;
+    color: #333;
+}
+header .submenu li a:hover {
+    color: #b0b6ff;
+}
+#slider {
+    width: 100%;
+    height: 100vh;
+    position: relative;
+    overflow: hidden;
+}
+#slider .panel {
+    width: calc(100% * 5);
+    height: 100%;
+    margin-left: 0%;
+}
+#slider .panel li {
+    width: calc(100% / 5);
+    height: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    float: left;
+}
+#slider .panel li:nth-of-type(1) {
+    background-image: url(../images/pic1.jpg);
+}
+#slider .panel li:nth-of-type(2) {
+    background-image: url(../images/pic2.jpg);
+}
+#slider .panel li:nth-of-type(3) {
+    background-image: url(../images/pic3.jpg);
+}
+#slider .panel li:nth-of-type(4) {
+    background-image: url(../images/pic4.jpg);
+}
+#slider .panel li:nth-of-type(5) {
+    background-image: url(../images/pic5.jpg);
+}
+
+.btns {
+    position: absolute;
+    width: 90%;
+    left: 5%;
+    bottom: 10vh;
+    perspective: 800px;
+}
+.btns li {
+    float: left;
+    width: 20%;
+    height: 40px;
+    box-sizing: border-box;
+    padding: 0px 20px;
+}
+.btns li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    border: 1px solid #333;
+    font: 14px/40px "arial";
+    color: #333;
+    text-align: center;
+    border-radius: 20px;
+    transition: 1s;
+}
+.btns li.on a {
+    background: rgba(0,0,0, 0.5);
+    color: #fff;
+    transform: rotateY(360deg);
+    font-weight: bold;
+}
+#circle {
+    position: fixed;
+    top: 50%;
+    margin-top: -160px;
+    right: -160px;
+    transition: 1.5s;
+}
+#circle.rot1 {
+    transform: rotate(0deg);
+}
+#circle.rot2 {
+    transform: rotate(60deg);
+}
+#circle.rot3 {
+    transform: rotate(120deg);
+}
+#circle.rot4 {
+    transform: rotate(180deg);
+}
+#circle.rot5 {
+    transform: rotate(240deg);
+}
